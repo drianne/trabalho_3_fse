@@ -70,7 +70,7 @@ void RequestOpenWeatherMap(void *params){
             printf("\nTemperatura Mínima: %.1lf°C\n", info.temperature_min);
             printf("Temperatura Máxima: %.1lf°C\n", info.temperature_max);
             printf("Temperatura Atual: %.1lf°C\n", info.temperature);
-            printf("Humidade: %.1lf%%\n", info.humidity);
+            printf("Umidade do ar: %.1lf%%\n", info.humidity);
 
             xSemaphoreGive(conexaoWifiSemaphore);
             vTaskDelay(DELAY_REQUEST / portTICK_PERIOD_MS);
@@ -98,7 +98,7 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
 
     conexaoWifiSemaphore = xSemaphoreCreateBinary();
-    
+
     start_wifi();
 
     xTaskCreate(&RequestIpStack, "HTTP Request Location", 4096, NULL, 1, NULL);
