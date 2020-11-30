@@ -1,0 +1,33 @@
+menu "Configuração do Wifi"
+
+    config ESP_WIFI_SSID
+        string "WiFi SSID"
+        default "ssid"
+        help
+            Nome da rede Wifi.
+
+    config ESP_WIFI_PASSWORD
+        string "Senha do Wifi"
+        default "minha_senha"
+        help
+            Senha do WiFi (WPA or WPA2).
+
+    config ESP_MAXIMUM_RETRY
+        int "Número máximo de tentativas de conexão"
+        default 5
+        help
+            Configure o valor máximo de tentativas de conexão.
+endmenu
+
+menu "Configuração das chaves das API's"
+    config OPENWEATHERMAPORG_ACCESS_KEY
+        string "Chave de acesso do openweathermap.org"
+        default "access key openweathermap"
+        help
+            Configure chave de acesso do openweathermap.
+    config IPSTACK_ACCESS_KEY
+        string "Chave de acesso do ipstack.com"
+        default "access key ipstack"
+        help
+            Configure chave de acesso do ipstack.  
+endmenu
