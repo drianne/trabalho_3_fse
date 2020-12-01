@@ -30,9 +30,10 @@ Disponibilizar o repositório com o código fonte de modo que o mesmo possa ser 
 2. Executar o export.sh do esp-idf 
     - ". ../esp/esp-idf/export.sh" -> Se a pasta esp estiver no mesmo local que o projeto
 3. Conectar a ESP32 através do usb
-4. Buildar o projeto 
+4. Configurar no menu as chaves da api e credenciais da internet
+5. Buildar o projeto 
     - idf.py build
-5. Transferir o código para a ESP e monitorar 
+6. Transferir o código para a ESP e monitorar 
     - idf.py -p /dev/ttyUSB0 flash monitor
 
 
